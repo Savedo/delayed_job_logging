@@ -1,0 +1,80 @@
+AllCops:
+  Exclude:
+    - 'db/migrate/**/*'
+    - 'vendor/**/*'
+    - 'bin/**/*'
+    - 'rgloader/**/*'
+    - 'spec/support/tddium_*'
+    - 'Gemfile'
+    - 'config/**/*'
+    - 'db/schema.rb'
+
+# Align ends correctly.
+Lint/EndAlignment:
+  # The value `keyword` means that `end` should be aligned with the matching
+  # keyword (if, while, etc.).
+  # The value `variable` means that in assignments, `end` should be aligned
+  # with the start of the variable on the left hand side of `=`. In all other
+  # situations, `end` should still be aligned with the keyword.
+  AlignWith: variable
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
+
+Metrics/LineLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Exclude:
+    - spec/**/*
+
+Documentation:
+  Enabled: false
+
+Style/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Style/AlignParameters:
+  # Alignment of parameters in multi-line method calls.
+  #
+  # The `with_fixed_indentation` style aligns the following lines with one
+  # level of indentation relative to the start of the line with the method call.
+  #
+  #     method_call(
+  #       a,
+  #       b
+  #     )
+  EnforcedStyle: with_fixed_indentation
+
+# Allows to align arrays like this with commas:
+# [
+#   ["one" , "two" , "three"],
+#   ["eins", "zwei", "drei"],
+#   ["unu" , "du"  , "tri"],
+# ]
+Style/SpaceBeforeComma:
+  Enabled: false
+
+Metrics/AbcSize:
+  # The ABC size is a calculated magnitude, so this number can be a Fixnum or
+  # a Float.
+  Max: 40
+  Exclude:
+    - spec/**/*
+
+# Allows to define DSLs like
+#   def good?
+#     @good
+#   end
+Style/TrivialAccessors:
+  ExactNameMatch: true
+  AllowDSLWriters: true
+
+ParameterLists:
+  CountKeywordArgs: false
