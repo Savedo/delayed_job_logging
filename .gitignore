@@ -9,3 +9,4 @@
 /tmp/
 spec/examples.txt
 .ruby-version
+*.gem

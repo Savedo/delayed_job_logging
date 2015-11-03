@@ -4,18 +4,19 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "delayed_job_logging/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "delayed_job_logging"
-  spec.version       = DelayedJobLogging::VERSION
-  spec.authors       = ["Johannes Barre"]
-  spec.email         = ["igel@igels.net"]
+  spec.name= "delayed_job_logging"
+  spec.version= DelayedJobLogging::VERSION
+  spec.authors= ["Johannes Barre"]
+  spec.email= ["igel@igels.net"]
 
-  spec.summary       = "Provides a module, which logs useful stuff about your Delayed Jobs in JSON format"
-  spec.homepage      = "https://github.com/Savedo/delayed_job_logging"
-  spec.license       = "MIT"
+  spec.summary= "Provides a module, which logs useful stuff about your Delayed Jobs in JSON format"
+  spec.homepage= "https://github.com/Savedo/delayed_job_logging"
+  spec.license= "MIT"
 
-  spec.require_paths = ["lib"]
+  spec.require_paths= ["lib"]
+  spec.files= Dir["lib/**/*.rb"]
 
-  spec.required_ruby_version = ">= 2.1"
+  spec.required_ruby_version= ">= 2.1"
 
   spec.add_runtime_dependency "delayed_job", "~> 4.0"
 
